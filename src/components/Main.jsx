@@ -11,7 +11,7 @@ const Main = () => {
   return (
     <div id="main">
       <img
-        className="w-full h-screen object-cover object-center bg-no-repeat scale-x-[-1]"
+        className="w-full h-screen object-cover object-center bg-no-repeat scale-x-[1]"
         src="https://images.pexels.com/photos/7988742/pexels-photo-7988742.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         alt="Background Image"
       />
