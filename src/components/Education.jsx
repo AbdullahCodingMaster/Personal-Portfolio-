@@ -26,7 +26,7 @@ const data = [
     details: `Continuing my academic journey, I pursued higher education in the field of Pre-Engineering at Azad Jammu and Kashmir's premier institution, Al-Qalam College in Muzaffarabad. Demonstrating an unwavering commitment to excellence, I secured an impressive 977 out of 1100 marks. This phase of my education was characterized by an intensified focus on technical and engineering subjects, and I dedicated extra effort to excel in the demanding curriculum. The challenging coursework at Al-Qalam College not only sharpened my analytical and problem-solving skills but also deepened my understanding of the intricacies within the field of Pre-Engineering. These experiences further solidified my academic foundation and set the stage for my future endeavors in the engineering domain.`,
   },
   {
-    year: "2020 - 2026 ",
+    year: "2022 - 2026 ",
     title: "Bachelor of Science (BS) Education",
     grade: "A",
     duration: "4 Years",

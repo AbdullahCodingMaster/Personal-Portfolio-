@@ -7,8 +7,8 @@ const projectData = [
   {
     img: portfolio,
     title: "Personal Portfolio",
-    githubLink: "https://github.com/AbdullahCodingMaster/Expanse-Tracker-/",
-    liveLink: "https://expansestrackers.netlify.app/",
+    githubLink: "https://github.com/AbdullahCodingMaster/Personal-Portfolio-/",
+    liveLink: "https://programmingwithabdullah.netlify.app/",
     technologies: "React Js, Javascript, Tailwind Css, Joi , and GetForm.io",
   },
   {
