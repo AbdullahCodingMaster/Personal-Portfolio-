@@ -1,24 +1,51 @@
-const ProjectItems = ({ img, title }) => {
+import React from "react";
+import PropTypes from "prop-types";
+import { FaGithub, FaGlobe } from "react-icons/fa";
+
+const ProjectItems = ({ img, title, githubLink, liveLink, technologies }) => {
   return (
-    <div className="relative  flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-gray-200 to-[#001b5e]">
+    <div className="relative group overflow-hidden transition duration-300 ease-in-out transform rounded-xl hover:shadow-md hover:bg-gradient-to-r from-gray-100 via-gray-100 to-[#849bd6]">
       <img
         src={img}
         alt={title}
-        className="rounded-xl  group-hover:opacity-10"
+        className="object-cover w-full h-auto rounded-xl group-hover:opacity-10"
       />
-      <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-        <h3 className="text-2xl font-bold text-white tracking-wider text-center">
+      <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
+        <h3 className="text-2xl font-bold text-black tracking-wider text-center">
           {title}
         </h3>
-        <p className="pb-4 pt-2 text-white text-center">React Js</p>
-        <a href="/">
-          <p className="text-center p-3 rounded-lg bg-white text-gray-700 font-bold cursor-pointer text-lg">
-            More Info
-          </p>
-        </a>
+        <p className="pb-2 pt-2 text-black text-center">{technologies}</p>
+        <div className="flex">
+          <a
+            href={githubLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn"
+          >
+            <FaGithub size={20} className="inline-block align-middle" />
+            <span className="ml-2">GitHub</span>
+          </a>
+          <a
+            href={liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn ml-2"
+          >
+            <FaGlobe size={20} className="inline-block align-middle" />
+            <span className="ml-2">Live Site</span>
+          </a>
+        </div>
       </div>
     </div>
   );
+};
+
+ProjectItems.propTypes = {
+  img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  githubLink: PropTypes.string.isRequired,
+  liveLink: PropTypes.string.isRequired,
+  technologies: PropTypes.string.isRequired,
 };
 
 export default ProjectItems;
