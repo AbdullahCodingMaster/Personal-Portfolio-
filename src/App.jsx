@@ -4,14 +4,16 @@ import Education from "./components/Education";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Resume from "./components/Resume";
+import About from "./components/About";
+import Nav from "./components/NavBar";
 
 const App = () => {
   return (
     <>
       <SideNav />
+      <Nav />
       <Main />
-      <Resume />
+      <About />
       <Education />
       <Projects />
       <Contact />

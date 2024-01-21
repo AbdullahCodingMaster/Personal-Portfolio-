@@ -61,7 +61,7 @@ const Contact = () => {
   // };
 
   return (
-    <div id="contact" className="max-w-[1040px] m-auto md:pl-20 p-4 py-16">
+    <div id="contact" className="max-w-screen-xl mx-auto p-4 py-16  md:pl-16">
       <h1 className="text-4xl font-bold text-center text-[#001b5e]">Contact</h1>
       <form
         action="https://getform.io/f/1e5ad879-e6da-455b-9aff-7aaf76200ee7"

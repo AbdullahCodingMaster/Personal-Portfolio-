@@ -11,6 +11,7 @@ import { MdCastForEducation } from "react-icons/md";
 
 const menuItems = [
   { id: 1, icon: <AiOutlineHome size={20} />, text: "Home", link: "#main" },
+  { id: 2, icon: <BsPerson size={20} />, text: "About", link: "#about" },
   {
     id: 3,
     icon: <MdCastForEducation size={20} />,
@@ -23,7 +24,6 @@ const menuItems = [
     text: "Projects",
     link: "#projects",
   },
-  { id: 2, icon: <BsPerson size={20} />, text: "Resume", link: "#resume" },
   {
     id: 5,
     icon: <AiOutlineMail size={20} />,
@@ -44,12 +44,12 @@ const SideNav = () => {
       {nav ? (
         <AiOutlineClose
           onClick={handleNav}
-          className="absolute top-4 right-4 z-[99] md:hidden text-black font-bold"
+          className="fixed top-4 right-4 z-[99] font-extrabold md:hidden text-green-500"
         />
       ) : (
         <AiOutlineMenu
           onClick={handleNav}
-          className="absolute top-4 right-4 z-[99] md:hidden text-black font-bold"
+          className="fixed top-4 right-4 z-[99] font-extrabold md:hidden text-green-500"
         />
       )}
 

@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import { FaGithub, FaGlobe } from "react-icons/fa";
 
@@ -29,7 +28,7 @@ const ProjectItems = ({ img, title, githubLink, liveLink, technologies }) => {
             href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn ml-2"
+            className="btn ml-4" /* Added margin-left here */
           >
             <FaGlobe size={20} className="inline-block align-middle" />
             <span className="ml-2">Live Site</span>

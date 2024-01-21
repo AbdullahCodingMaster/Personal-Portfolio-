@@ -30,11 +30,14 @@ const projectData = [
 
 const Projects = () => {
   return (
-    <div id="projects" className="max-w-[1040px] m-auto md:pl-20 p-4 py-16">
+    <div
+      id="projects"
+      className="max-w-screen-xl py-16  md:pl-16 lg:max-w-screen-xl pb-0 mx-auto p-4"
+    >
       <h1 className="text-4xl font-bold text-center text-[#001b5e]">
         Projects
       </h1>
-      <p className="text-center py-8">
+      <p className="text-justify py-8">
         Explore a showcase of my hands-on experience and practical skills
         through a collection of projects that I have diligently developed. These
         projects were undertaken by following instructional YouTube videos,

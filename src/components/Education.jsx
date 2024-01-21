@@ -35,7 +35,10 @@ const data = [
 ];
 const Education = () => {
   return (
-    <div id="education" className="max-w-screen-xl mx-auto p-4 py-16  md:pl-16">
+    <div
+      id="education"
+      className="max-w-screen-xl py-16  md:pl-16 lg:max-w-screen-xl pb-0 mx-auto p-4"
+    >
       <h1 className="text-4xl font-bold text-center text-[#001b5e] mb-8">
         Educational Pathway
       </h1>

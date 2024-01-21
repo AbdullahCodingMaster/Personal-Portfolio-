@@ -1,9 +1,13 @@
 import { FaCheck } from "react-icons/fa";
-import profile from "../assets/profile.png";
 
-const Resume = () => {
-  const introduction =
-    "Passionate software engineer with expertise in front-end and back-end development. Adept at creating scalable and efficient solutions using modern technologies.";
+const About = () => {
+  const introduction = `I'm Muhammad Abdullah Awan, a dedicated professional 
+  currently studying at the University of Azad Jammu and Kashmir. Passionate 
+  about web development, I am actively seeking opportunities in problem-solving.
+  Thriving in dynamic environments, I focus on maintaining academic excellence 
+  while honing my skills in HTML, CSS, and JavaScript. Progressing to advanced 
+  technologies like Tailwind CSS and React.js, I am on a continuous journey of 
+  growth and learning.`;
 
   const skills = [
     { name: "JavaScript (ES6+)", icon: <FaCheck className="text-green-500" /> },
@@ -22,22 +26,17 @@ const Resume = () => {
   ];
 
   return (
-    <div id="resume" className="max-w-[800px] m-auto p-4  md:pl-16">
+    <div
+      id="about"
+      className="max-w-screen-xl  py-16  md:pl-16 lg:max-w-screen-xl pb-0 mx-auto p-4 "
+    >
       <h1 className="text-4xl font-bold text-center text-[#001b5e] mb-8">
-        Resume
+        About
       </h1>
-      <div className="text-center mb-4">
-        <img
-          src={profile} // Replace with your image source
-          alt="Profile"
-          className="mt-2 mb-2 rounded-full h-32 w-32 lg:h-40 lg:w-40 object-cover mx-auto"
-        />
-        <h1 className="text-3xl font-bold mt-2">Muhammad Abdullah Awan</h1>
-      </div>
 
       <section className="mb-6">
         <h2 className="text-xl font-semibold mb-2">Introduction</h2>
-        <p>{introduction}</p>
+        <p className="text-justify">{introduction}</p>
       </section>
 
       <section>
@@ -55,4 +54,4 @@ const Resume = () => {
   );
 };
 
-export default Resume;
+export default About;
