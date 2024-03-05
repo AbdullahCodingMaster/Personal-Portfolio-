@@ -27,7 +27,7 @@ const data = [
   },
   {
     year: "2022 - 2026 ",
-    title: "Bachelor of Science (BS) Education",
+    title: "BS Software Engineering",
     grade: "A",
     duration: "4 Years",
     details: `Currently, I am enrolled in the Department of Software Engineering at the University of Azad Jammu and Kashmir, currently in my 3rd semester. Throughout my academic journey, I have consistently maintained a CGPA of 3.55 in the first two semesters. My coursework has encompassed various software development courses, including in-depth studies of C++, Object-Oriented Programming (OOP), and Data Structures and Algorithms (DSA). In addition to mastering these fundamental aspects, I have delved into the realm of front-end web development, acquiring proficiency in JavaScript and exploring frameworks such as ReactJS. Furthermore, my current focus lies in back-end development, where I am actively engaged in mastering the MERN (MongoDB, Express.js, ReactJS, Node.js) stack. This comprehensive exposure to both front-end and back-end technologies positions me to contribute effectively to the dynamic and evolving field of software engineering.`,
@@ -39,7 +39,7 @@ const Education = () => {
       id="education"
       className="max-w-screen-xl py-16  md:pl-16 lg:max-w-screen-xl pb-0 mx-auto p-4"
     >
-      <h1 className="text-4xl font-bold text-center text-[#001b5e] mb-8">
+      <h1 className="text-4xl font-bold text-center text-blue-600  mb-8">
         Educational Pathway
       </h1>
       {data.map((item, index) => (

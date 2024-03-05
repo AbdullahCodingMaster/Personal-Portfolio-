@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 const SocialIconLink = ({ link, icon }) => (
-  <a href={link} target="_blank" rel="noopener noreferrer" color="red">
+  <a href={link} target="_blank" rel="noopener noreferrer" >
     {icon}
   </a>
 );

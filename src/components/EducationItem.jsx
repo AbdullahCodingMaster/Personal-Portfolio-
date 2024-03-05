@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 const EducationItem = ({ year, title, duration, children, grade }) => {
   return (
     <div className="mb-8">
-      <h2 className="text-2xl font-bold text-[#001b5e]">{title}</h2>
-      <p className="text-gray-500">{year}</p>
-      <p className="text-gray-600">{duration}</p>
-      <h2 className="text-1xl font-bold text-[#001b5e]">Grade : {grade}</h2>
+      <h2 className="text-2xl font-bold text-blue-300 ">{title}</h2>
+      <p className="text-gray-200">{year}</p>
+      <p className="text-gray-400">{duration}</p>
+      <h2 className="text-1xl font-bold text-blue-300 ">Grade : {grade}</h2>
       {children}
     </div>
   );

@@ -8,7 +8,7 @@ const projectData = [
     img: portfolio,
     title: "Personal Portfolio",
     githubLink: "https://github.com/AbdullahCodingMaster/Personal-Portfolio-/",
-    liveLink: "https://programmingwithabdullah.netlify.app/",
+    liveLink: "https://muhammadabdullahawan.netlify.app/",
     technologies: "React Js, Javascript, Tailwind Css, Joi , and GetForm.io",
   },
   {
@@ -34,7 +34,7 @@ const Projects = () => {
       id="projects"
       className="max-w-screen-xl py-16  md:pl-16 lg:max-w-screen-xl pb-0 mx-auto p-4"
     >
-      <h1 className="text-4xl font-bold text-center text-[#001b5e]">
+      <h1 className="text-4xl font-bold text-center text-blue-600 ">
         Projects
       </h1>
       <p className="text-justify py-8">

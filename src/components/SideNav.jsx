@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { BsPerson } from "react-icons/bs";
+import { MdCastForEducation } from "react-icons/md";
 import {
   AiOutlineMenu,
   AiOutlineClose,
@@ -6,8 +8,6 @@ import {
   AiOutlineProject,
   AiOutlineMail,
 } from "react-icons/ai";
-import { BsPerson } from "react-icons/bs";
-import { MdCastForEducation } from "react-icons/md";
 
 const menuItems = [
   { id: 1, icon: <AiOutlineHome size={20} />, text: "Home", link: "#main" },
@@ -44,23 +44,23 @@ const SideNav = () => {
       {nav ? (
         <AiOutlineClose
           onClick={handleNav}
-          className="fixed top-4 right-4 z-[99] font-extrabold md:hidden text-green-500"
+          className="fixed top-4 right-4 z-[99] font-extrabold md:hidden text-white-500"
         />
       ) : (
         <AiOutlineMenu
           onClick={handleNav}
-          className="fixed top-4 right-4 z-[99] font-extrabold md:hidden text-green-500"
+          className="fixed top-4 right-4 z-[99] font-extrabold md:hidden text-white-500"
         />
       )}
 
       {nav && (
-        <div className="fixed h-screen w-full bg-white/90 flex flex-col justify-center items-center z-20">
+        <div className="fixed h-screen w-full bg-black/40 flex flex-col justify-center items-center z-20">
           {menuItems.map((item) => (
             <a
               key={item.id}
               onClick={handleNav}
               href={item.link}
-              className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-2 cursor-pointer hover:scale-110 ease-in duration-200"
+              className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-blue-500 shadow-gray-800 m-2 p-2 cursor-pointer hover:scale-110 ease-in duration-200"
             >
               {item.icon}
               <span className="pl-4">{item.text}</span>
@@ -75,7 +75,7 @@ const SideNav = () => {
             <a
               key={item.id}
               href={item.link}
-              className="rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+              className="rounded-full shadow-lg bg-blue-500 shadow-gray-800 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
             >
               {item.icon}
             </a>

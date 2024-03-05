@@ -9,7 +9,7 @@ const ProjectItems = ({ img, title, githubLink, liveLink, technologies }) => {
         alt={title}
         className="object-cover w-full h-auto rounded-xl group-hover:opacity-10"
       />
-      <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
+      <div className="absolute text-black inset-0 flex flex-col items-center justify-center opacity-0 transition duration-300 ease-in-out group-hover:opacity-100">
         <h3 className="text-2xl font-bold text-black tracking-wider text-center">
           {title}
         </h3>

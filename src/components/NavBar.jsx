@@ -6,15 +6,14 @@ import {
   FaGithub,
 } from "react-icons/fa";
 import SocialIconLink from "./SocialIconLink";
-import logo from "../assets/logo.png";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 w-full bg-white text-white p-4 z-50">
+    <nav className="fixed top-0 w-full bg-black text-white p-4 z-50 shadow-md shadow-slate-900">
       <div className="container mx-auto flex items-center justify-between">
         <h2 className="text-lg md:text-xl font-bold">
-          <a href="#" className="">
-            <img src={logo} alt="AbdullahCodingMaster" className="w-20 h-15" />
+          <a href="/" className="">
+            <h2 className="text-blue-500 italic">Abdullah</h2>
           </a>
         </h2>
         <div className="flex items-center">
@@ -24,7 +23,7 @@ const Navbar = () => {
               icon={
                 <FaTwitter
                   size={20}
-                  className="text-blue-500 hover:text-blue-700"
+                  className="text-blue-500 hover:text-blue-300"
                 />
               }
             />
@@ -34,7 +33,7 @@ const Navbar = () => {
               icon={
                 <FaInstagram
                   size={20}
-                  className="text-red-500 hover:text-red-700"
+                  className="text-red-500 hover:text-red-300"
                 />
               }
             />
@@ -43,7 +42,7 @@ const Navbar = () => {
               icon={
                 <FaLinkedinIn
                   size={20}
-                  className="text-blue-500 hover:text-blue-700"
+                  className="text-blue-500 hover:text-blue-300"
                 />
               }
             />
@@ -52,7 +51,7 @@ const Navbar = () => {
               icon={
                 <FaGithub
                   size={20}
-                  className="text-black hover:text-gray-700"
+                  className="text-gray-400 hover:text-gray-100"
                 />
               }
             />
@@ -61,7 +60,7 @@ const Navbar = () => {
               icon={
                 <FaFacebookF
                   size={20}
-                  className="text-blue-500 hover:text-blue-700"
+                  className="text-blue-500 hover:text-blue-300"
                 />
               }
             />

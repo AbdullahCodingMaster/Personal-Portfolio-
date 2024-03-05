@@ -12,13 +12,16 @@ const About = () => {
   const skills = [
     { name: "JavaScript (ES6+)", icon: <FaCheck className="text-green-500" /> },
     { name: "React.js", icon: <FaCheck className="text-green-500" /> },
-    { name: "Node.js", icon: <FaCheck className="text-green-500" /> },
-    { name: "Express.js", icon: <FaCheck className="text-green-500" /> },
+    // { name: "Node.js", icon: <FaCheck className="text-green-500" /> },
+    // { name: "Express.js", icon: <FaCheck className="text-green-500" /> },
     { name: "HTML5", icon: <FaCheck className="text-green-500" /> },
     { name: "CSS3", icon: <FaCheck className="text-green-500" /> },
-    { name: "RESTful APIs", icon: <FaCheck className="text-green-500" /> },
-    { name: "MongoDB", icon: <FaCheck className="text-green-500" /> },
+    // { name: "RESTful APIs", icon: <FaCheck className="text-green-500" /> },
+    // { name: "MongoDB", icon: <FaCheck className="text-green-500" /> },
     { name: "Git", icon: <FaCheck className="text-green-500" /> },
+    { name: "GitHub", icon: <FaCheck className="text-green-500" /> },
+    { name: "Tailwind CSS", icon: <FaCheck className="text-green-500" /> },
+    { name: "Bootstrap", icon: <FaCheck className="text-green-500" /> },
     {
       name: "Responsive Web Design",
       icon: <FaCheck className="text-green-500" />,
@@ -30,7 +33,7 @@ const About = () => {
       id="about"
       className="max-w-screen-xl  py-16  md:pl-16 lg:max-w-screen-xl pb-0 mx-auto p-4 "
     >
-      <h1 className="text-4xl font-bold text-center text-[#001b5e] mb-8">
+      <h1 className="text-4xl font-bold text-center text-blue-600 mb-8">
         About
       </h1>
 
