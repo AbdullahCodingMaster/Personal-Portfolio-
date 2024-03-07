@@ -9,11 +9,11 @@ import SocialIconLink from "./SocialIconLink";
 
 const Footer = () => {
   return (
-    <footer className="bg-dark text-gray-400 p-5">
-      <div className="container mx-auto py-8 flex flex-col md:flex-row justify-between items-center">
+    <footer className="max-w-screen-xl py-16  md:pl-16 lg:max-w-screen-xl pb-0 mx-auto p-4 bg-dark text-gray-400 ">
+      <div className="mb-8 border-2 border-blue-700 p-5  container flex flex-col md:flex-row justify-between items-center">
         {/* Footer Menu */}
-        <div className="mb-4 md:mb-0">
-          <ul className="flex flex-wrap space-x-2 md:space-x-4 justify-center">
+        <div className="mb-4 md:mb-0 flex justify-center md:justify-start">
+          <ul className="flex flex-wrap space-x-4 md:space-x-2">
             <li>
               <a href="#main">Home</a>
             </li>

@@ -3,7 +3,7 @@ import { FaGithub, FaGlobe } from "react-icons/fa";
 
 const ProjectItems = ({ img, title, githubLink, liveLink, technologies }) => {
   return (
-    <div className="relative group overflow-hidden transition duration-300 ease-in-out transform rounded-xl hover:shadow-md hover:bg-gradient-to-r from-gray-100 via-gray-100 to-[#849bd6]">
+    <div className="relative group overflow-hidden transition duration-300 ease-in-out transform rounded-xl hover:shadow-md hover:bg-gradient-to-r from-gray-100 via-gray-100 to-[#849bd6] ">
       <img
         src={img}
         alt={title}

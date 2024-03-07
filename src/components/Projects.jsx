@@ -34,10 +34,10 @@ const Projects = () => {
       id="projects"
       className="max-w-screen-xl py-16  md:pl-16 lg:max-w-screen-xl pb-0 mx-auto p-4"
     >
-      <h1 className="text-4xl font-bold text-center text-blue-600 ">
+      <h1 className="text-4xl font-bold text-center text-blue-600 my-5 ">
         Projects
       </h1>
-      <p className="text-justify py-8">
+      <p className="border-2 border-blue-700 p-5 text-base md:text-lg text-start md:text-justify  ">
         Explore a showcase of my hands-on experience and practical skills
         through a collection of projects that I have diligently developed. These
         projects were undertaken by following instructional YouTube videos,
@@ -45,7 +45,7 @@ const Projects = () => {
         project reflects my commitment to continuous learning and my ability to
         translate theoretical knowledge into tangible results.
       </p>
-      <div className="grid sm:grid-cols-2 gap-3">
+      <div className="grid sm:grid-cols-2 gap-3 border-2 border-blue-700 p-5">
         {projectData.map((project, index) => (
           <ProjectItems
             key={index}

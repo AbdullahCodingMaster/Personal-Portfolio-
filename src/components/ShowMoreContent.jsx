@@ -1,3 +1,4 @@
+// ShowMoreContent.js
 import { useState } from "react";
 import PropTypes from "prop-types";
 
@@ -9,7 +10,7 @@ const ShowMoreContent = ({ initialContent, fullContent }) => {
   };
 
   return (
-    <div className="text-justify">
+    <div className="text-base md:text-lg text-start md:text-justify mb-4">
       {showMore ? fullContent : initialContent}
       <div className="mt-2">
         <button

@@ -4,8 +4,13 @@
 
 * {
   scroll-behavior: smooth;
+  font-family: sans-serif;
 }
 body {
   background: #000;
-  color: white;
+  color: rgb(227, 213, 213);
+}
+
+.logo {
+  font-family: cursive;
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import Joi from "joi-browser";
+import Joi from "joi-browser";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,19 +12,19 @@ const Contact = () => {
 
   const [errors, setErrors] = useState({});
 
-  // const schema = {
-  //   name: Joi.string().required().label("Name"),
-  //   phone: Joi.string().label("Phone"),
-  //   email: Joi.string().email().required().label("Email"),
-  //   subject: Joi.string().required().label("Subject"),
-  //   message: Joi.string().required().label("Message"),
-  // };
+  const schema = {
+    name: Joi.string().required().label("Name"),
+    phone: Joi.string().label("Phone"),
+    email: Joi.string().email().required().label("Email"),
+    subject: Joi.string().required().label("Subject"),
+    message: Joi.string().required().label("Message"),
+  };
 
-  // const validateField = (name, value) => {
-  //   const fieldSchema = { [name]: schema[name] };
-  //   const { error } = Joi.validate({ [name]: value }, fieldSchema);
-  //   return error ? error.details[0].message : null;
-  // };
+  const validateField = (name, value) => {
+    const fieldSchema = { [name]: schema[name] };
+    const { error } = Joi.validate({ [name]: value }, fieldSchema);
+    return error ? error.details[0].message : null;
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,42 +32,58 @@ const Contact = () => {
     setErrors({ ...errors, [name]: "" }); // Clear the error when the field changes
   };
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  //   const newErrors = {};
-  //   Object.keys(formData).forEach((key) => {
-  //     const error = validateField(key, formData[key]);
-  //     if (error) newErrors[key] = error;
-  //   });
+    const newErrors = {};
+    Object.keys(formData).forEach((key) => {
+      const error = validateField(key, formData[key]);
+      if (error) newErrors[key] = error;
+    });
 
-  //   if (Object.keys(newErrors).length > 0) {
-  //     setErrors(newErrors);
-  //     return;
-  //   }
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
 
-  //   // Handle form submission logic here
-  //   // For example, you can send the form data to your server
+    try {
+      const response = await fetch(
+        "https://getform.io/f/1e5ad879-e6da-455b-9aff-7aaf76200ee7",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
-  //   // Reset form after successful submission
-  //   setFormData({
-  //     name: "",
-  //     phone: "",
-  //     email: "",
-  //     subject: "",
-  //     message: "",
-  //   });
-  //   setErrors({});
-  // };
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      // Reset form after successful submission
+      setFormData({
+        name: "",
+        phone: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+      setErrors({});
+      alert("Form submitted successfully!");
+    } catch (error) {
+      console.error("There was an error submitting the form:", error);
+      alert("There was an error submitting the form. Please try again later.");
+    }
+  };
 
   return (
-    <div id="contact" className="max-w-screen-xl mx-auto p-4 py-16  md:pl-16">
-      <h1 className="text-4xl font-bold text-center text-blue-600">Contact</h1>
-      <form
-        action="https://getform.io/f/1e5ad879-e6da-455b-9aff-7aaf76200ee7"
-        method="POST"
-        // onSubmit={handleSubmit}
-      >
+    <div id="contact" className="max-w-screen-xl p-5 mx-auto pt-16  md:pl-16">
+      <h1 className="text-4xl font-bold text-center text-blue-600 my-5">
+        Contact
+      </h1>
+      <form onSubmit={handleSubmit} className=" border-2 border-blue-700 p-5 ">
         <div className="flex flex-col py-2">
           <label className="uppercase text-sm py-2">Name</label>
           <input

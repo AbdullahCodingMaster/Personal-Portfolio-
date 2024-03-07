@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between">
         <h2 className="text-lg md:text-xl font-bold">
           <a href="/" className="">
-            <h2 className="text-blue-500 italic">Abdullah</h2>
+            <h2 className="text-blue-700 logo italic">Abdullah</h2>
           </a>
         </h2>
         <div className="flex items-center">
@@ -27,7 +27,6 @@ const Navbar = () => {
                 />
               }
             />
-
             <SocialIconLink
               link="https://www.instagram.com/muhammadabdullahawan324/"
               icon={
