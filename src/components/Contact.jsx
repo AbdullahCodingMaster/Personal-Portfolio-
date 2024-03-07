@@ -80,7 +80,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="max-w-screen-xl p-5 mx-auto pt-16  md:pl-16">
-      <h1 className="text-4xl font-bold text-center text-blue-600 my-5">
+      <h1 className="text-4xl font-bold text-center text-white my-5">
         Contact
       </h1>
       <form onSubmit={handleSubmit} className=" border-2 border-blue-700 p-5 ">

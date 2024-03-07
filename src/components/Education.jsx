@@ -39,7 +39,7 @@ const Education = () => {
       id="education"
       className="max-w-screen-xl py-16 md:pl-16 lg:max-w-screen-xl pb-0 mx-auto p-4"
     >
-      <h1 className="text-4xl font-bold text-center text-blue-600 my-5">
+      <h1 className="text-4xl font-bold text-center text-white my-5">
         Educational Pathway
       </h1>
       {data.map((item, index) => (

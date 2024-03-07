@@ -27,9 +27,7 @@ const About = () => {
       id="about"
       className="max-w-screen-xl py-16 md:pl-16 lg:max-w-screen-xl pb-0 mx-auto p-4"
     >
-      <h1 className="text-4xl font-bold text-center text-blue-600 my-5">
-        About
-      </h1>
+      <h1 className="text-4xl font-bold text-center text-white my-5">About</h1>
 
       <section className="border-2 border-blue-700 p-5">
         <h2 className="text-2xl font-bold text-blue-300">Introduction</h2>
