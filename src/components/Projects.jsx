@@ -9,53 +9,52 @@ const projectData = [
     title: "Personal Portfolio",
     githubLink: "https://github.com/AbdullahCodingMaster/Personal-Portfolio-/",
     liveLink: "https://muhammadabdullahawan.netlify.app/",
-    technologies: "React Js, Javascript, Tailwind Css, Joi , and GetForm.io",
+    technologies: "React JS, JavaScript, Tailwind CSS, Joi, GetForm.io",
   },
   {
     img: moshify,
     title: "Moshify",
     githubLink: "https://github.com/AbdullahCodingMaster/MoshifyProject",
     liveLink: "https://abdullahcodingmaster.github.io/MoshifyProject/",
-    technologies: "HTML5 and CSS3",
+    technologies: "HTML5, CSS3",
   },
   {
     img: expansetracker,
-    title: "Expanse Tracker",
+    title: "Expense Tracker",
     githubLink: "https://github.com/AbdullahCodingMaster/Expanse-Tracker-/",
     liveLink: "https://expansestrackers.netlify.app/",
-    technologies: "React Js, Typescript, Bootstrap, Zod , and React-Hook-Form",
+    technologies: "React JS, TypeScript, Bootstrap, Zod, React-Hook-Form",
   },
-  // Add more project data as needed
 ];
 
 const Projects = () => {
   return (
-    <div
-      id="projects"
-      className="max-w-screen-xl py-16  md:pl-16 lg:max-w-screen-xl pb-0 mx-auto p-4"
-    >
-      <h1 className="text-4xl font-bold text-center text-white my-5 ">
+    <div id="projects" className="max-w-screen-xl mx-auto py-16 px-4 md:px-16">
+      <h1 className="text-4xl font-bold text-center text-white mb-10">
         Projects
       </h1>
-      <p className="border-2 border-blue-700 p-5 text-base md:text-lg text-start md:text-justify  ">
-        Explore a showcase of my hands-on experience and practical skills
-        through a collection of projects that I have diligently developed. These
-        projects were undertaken by following instructional YouTube videos,
-        where I applied the concepts learned to bring these ideas to life. Each
-        project reflects my commitment to continuous learning and my ability to
-        translate theoretical knowledge into tangible results.
-      </p>
-      <div className="grid sm:grid-cols-2 gap-3 border-2 border-blue-700 p-5">
-        {projectData.map((project, index) => (
-          <ProjectItems
-            key={index}
-            img={project.img}
-            title={project.title}
-            githubLink={project.githubLink}
-            liveLink={project.liveLink}
-            technologies={project.technologies}
-          />
-        ))}
+
+      {/* Background color applied only to the text and project items */}
+      <div className="bg-gray-800 p-8 rounded-lg">
+        <p className="text-lg text-white text-start md:text-justify mb-8 border-l-4 border-blue-600 pl-4">
+          Explore my practical experience through a collection of projects,
+          reflecting my commitment to learning. These projects were developed by
+          following instructional YouTube videos, showcasing my ability to
+          convert theory into real-world results.
+        </p>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projectData.map((project, index) => (
+            <ProjectItems
+              key={index}
+              img={project.img}
+              title={project.title}
+              githubLink={project.githubLink}
+              liveLink={project.liveLink}
+              technologies={project.technologies}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

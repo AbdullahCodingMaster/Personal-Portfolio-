@@ -35,47 +35,45 @@ const menuItems = [
 const SideNav = () => {
   const [nav, setNav] = useState(false);
 
-  const handleNav = () => {
-    setNav(!nav);
-  };
+  const handleNav = () => setNav(!nav);
 
   return (
     <div>
       {nav ? (
         <AiOutlineClose
           onClick={handleNav}
-          className="fixed top-4 right-4 z-[99] font-extrabold md:hidden text-white-500"
+          className="fixed top-4 right-4 z-[99] text-3xl md:hidden text-white cursor-pointer hover:text-gray-400 transition-colors"
         />
       ) : (
         <AiOutlineMenu
           onClick={handleNav}
-          className="fixed top-4 right-4 z-[99] font-extrabold md:hidden text-white-500"
+          className="fixed top-4 right-4 z-[99] text-3xl md:hidden text-white cursor-pointer hover:text-gray-400 transition-colors"
         />
       )}
 
       {nav && (
-        <div className="fixed h-screen w-full bg-black/40 flex flex-col justify-center items-center z-20">
+        <div className="fixed inset-0 bg-gradient-to-b from-gray-900 via-black to-gray-900 flex flex-col justify-center items-center z-20 space-y-6">
           {menuItems.map((item) => (
             <a
               key={item.id}
               onClick={handleNav}
               href={item.link}
-              className="w-[75%] flex justify-center items-center rounded-full shadow-lg bg-blue-500 shadow-gray-800 m-2 p-2 cursor-pointer hover:scale-110 ease-in duration-200"
+              className="w-[80%] text-white flex items-center justify-center p-4 bg-blue-600 hover:bg-blue-500 rounded-full shadow-lg shadow-gray-800 transition-all duration-300 transform hover:scale-105"
             >
               {item.icon}
-              <span className="pl-4">{item.text}</span>
+              <span className="pl-4 text-lg">{item.text}</span>
             </a>
           ))}
         </div>
       )}
 
-      <div className="md:block hidden fixed top-[25%] z-10">
-        <div className="flex flex-col">
+      <div className="hidden md:block fixed top-[30%] left-0 z-10">
+        <div className="flex flex-col space-y-4">
           {menuItems.map((item) => (
             <a
               key={item.id}
               href={item.link}
-              className="rounded-full shadow-lg bg-blue-500 shadow-gray-800 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300"
+              className="p-4 bg-blue-600 text-white rounded-full shadow-lg shadow-gray-800 hover:bg-blue-500 transition-all duration-300 transform hover:scale-110"
             >
               {item.icon}
             </a>

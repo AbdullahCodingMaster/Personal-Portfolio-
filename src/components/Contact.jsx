@@ -79,76 +79,83 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="max-w-screen-xl p-5 mx-auto pt-16  md:pl-16">
+    <div id="contact" className="max-w-screen-xl mx-auto p-5 pt-16 md:px-16">
       <h1 className="text-4xl font-bold text-center text-white my-5">
         Contact
       </h1>
-      <form onSubmit={handleSubmit} className=" border-2 border-blue-700 p-5 ">
-        <div className="flex flex-col py-2">
-          <label className="uppercase text-sm py-2">Name</label>
-          <input
-            className="border-2 rounded-lg p-3 flex border-gray-300 outline-none text-black bg-slate-200"
-            type="text"
-            name="name"
-            id="name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-          {errors.name && (
-            <span className="text-red-500 text-sm">{errors.name}</span>
-          )}
+      <form
+        onSubmit={handleSubmit}
+        className="bg-gray-800 p-8 rounded-lg shadow-lg"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div className="flex flex-col">
+            <label className="uppercase text-sm text-white">Name</label>
+            <input
+              className="rounded-lg p-3 bg-slate-200 text-black outline-none focus:ring-2 focus:ring-blue-500"
+              type="text"
+              name="name"
+              id="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            {errors.name && (
+              <span className="text-red-500 text-sm">{errors.name}</span>
+            )}
+          </div>
+
+          <div className="flex flex-col">
+            <label className="uppercase text-sm text-white">Phone</label>
+            <input
+              className="rounded-lg p-3 bg-slate-200 text-black outline-none focus:ring-2 focus:ring-blue-500"
+              type="text"
+              name="phone"
+              id="phone"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+            {errors.phone && (
+              <span className="text-red-500 text-sm">{errors.phone}</span>
+            )}
+          </div>
         </div>
 
-        <div className="flex flex-col py-2">
-          <label className="uppercase text-sm py-2">Phone</label>
-          <input
-            className="border-2 rounded-lg p-3 flex border-gray-300 outline-none text-black bg-slate-200"
-            type="text"
-            name="phone"
-            id="phone"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-          {errors.phone && (
-            <span className="text-red-500 text-sm">{errors.phone}</span>
-          )}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div className="flex flex-col">
+            <label className="uppercase text-sm text-white">Email</label>
+            <input
+              className="rounded-lg p-3 bg-slate-200 text-black outline-none focus:ring-2 focus:ring-blue-500"
+              type="email"
+              name="email"
+              id="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+            {errors.email && (
+              <span className="text-red-500 text-sm">{errors.email}</span>
+            )}
+          </div>
+
+          <div className="flex flex-col">
+            <label className="uppercase text-sm text-white">Subject</label>
+            <input
+              className="rounded-lg p-3 bg-slate-200 text-black outline-none focus:ring-2 focus:ring-blue-500"
+              type="text"
+              name="subject"
+              id="subject"
+              value={formData.subject}
+              onChange={handleChange}
+            />
+            {errors.subject && (
+              <span className="text-red-500 text-sm">{errors.subject}</span>
+            )}
+          </div>
         </div>
 
-        <div className="flex flex-col py-2">
-          <label className="uppercase text-sm py-2">Email</label>
-          <input
-            className="border-2 rounded-lg p-3 flex border-gray-300 outline-none text-black bg-slate-200"
-            type="email"
-            name="email"
-            id="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-          {errors.email && (
-            <span className="text-red-500 text-sm">{errors.email}</span>
-          )}
-        </div>
-
-        <div className="flex flex-col py-2">
-          <label className="uppercase text-sm py-2">Subject</label>
-          <input
-            className="border-2 rounded-lg p-3 flex border-gray-300 outline-none text-black bg-slate-200"
-            type="text"
-            name="subject"
-            id="subject"
-            value={formData.subject}
-            onChange={handleChange}
-          />
-          {errors.subject && (
-            <span className="text-red-500 text-sm">{errors.subject}</span>
-          )}
-        </div>
-
-        <div className="flex flex-col py-2">
-          <label className="uppercase text-sm py-2">Message</label>
+        <div className="flex flex-col mb-4">
+          <label className="uppercase text-sm text-white">Message</label>
           <textarea
-            className="border-2 rounded-lg p-3 flex border-gray-300 outline-none text-black bg-slate-200"
-            rows={10}
+            className="rounded-lg p-3 bg-slate-200 text-black outline-none focus:ring-2 focus:ring-blue-500"
+            rows={5}
             name="message"
             id="message"
             value={formData.message}
@@ -160,7 +167,7 @@ const Contact = () => {
         </div>
 
         <button
-          className="bg-blue-500 text-gray-100 mt-4 w-full p-4 rounded-lg hover:bg-blue-600"
+          className="bg-blue-500 text-white mt-4 w-full p-4 rounded-lg hover:bg-blue-600 transition"
           type="submit"
         >
           Send Message

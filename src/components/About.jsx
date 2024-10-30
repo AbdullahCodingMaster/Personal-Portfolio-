@@ -6,7 +6,7 @@ const About = () => {
   const skills = [
     { name: "C++ Programming", percentage: 90 },
     { name: "Object Oriented Programming", percentage: 85 },
-    { name: "Data Structure and Algorithms", percentage: 60 },
+    { name: "Data Structures and Algorithms", percentage: 60 },
     { name: "Responsive Web Design", percentage: 90 },
     { name: "HTML5", percentage: 90 },
     { name: "CSS3", percentage: 85 },
@@ -15,46 +15,59 @@ const About = () => {
     { name: "JavaScript (ES6+)", percentage: 90 },
     { name: "Git", percentage: 85 },
     { name: "GitHub", percentage: 85 },
-    { name: "React.js", percentage: 80 },
-    { name: "Node.js", percentage: 70 },
-    { name: "Express.js", percentage: 65 },
-    { name: "RESTful APIs", percentage: 5 },
-    { name: "MongoDB", percentage: 10 },
+    { name: "Postman", percentage: 80 },
+    { name: "Docker", percentage: 80 },
+    { name: "React.js", percentage: 90 },
+    { name: "Node.js", percentage: 90 },
+    { name: "Express.js", percentage: 95 },
+    { name: "RESTful APIs", percentage: 95 },
+    { name: "MongoDB", percentage: 90 },
+    { name: "PHP", percentage: 80 },
+    { name: "Codeigniter", percentage: 90 },
+    { name: "Laravel", percentage: 90 },
+    { name: "MYSQL", percentage: 90 },
   ];
 
   return (
     <div
       id="about"
-      className="max-w-screen-xl py-16 md:pl-16 lg:max-w-screen-xl pb-0 mx-auto p-4"
+      className="max-w-screen-xl py-16 px-6 md:pl-16 lg:max-w-screen-xl mx-auto"
     >
-      <h1 className="text-4xl font-bold text-center text-white my-5">About</h1>
+      <h1 className="text-4xl font-bold text-center text-white mb-12">
+        About Me
+      </h1>
 
-      <section className="border-2 border-blue-700 p-5">
-        <h2 className="text-2xl font-bold text-blue-300">Introduction</h2>
-        <p className="text-base md:text-lg text-start md:text-justify ">
+      <section className="bg-gray-800 p-6 rounded-xl shadow-lg mb-8">
+        <h2 className="text-2xl font-semibold text-blue-400 mb-4">
+          Introduction
+        </h2>
+        <p className="text-base md:text-lg text-gray-300 leading-relaxed">
           {introduction}
         </p>
       </section>
 
-      <section className="border-2 border-blue-700 p-5">
-        <h2 className="text-2xl font-bold text-blue-300">Skills</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <section className="bg-gray-800 p-6 rounded-xl shadow-lg">
+        <h2 className="text-2xl font-semibold text-blue-400 mb-6">Skills</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
-            <div key={index} className="flex items-center">
-              <div>
-                <FaCheck className="text-green-500" />
-              </div>
-              <div className="ml-2  w-full">
-                <span>{skill.name}</span>
-                <div className="bg-red-500 w-full h-3 rounded-md mt-1">
+            <div
+              key={index}
+              className="flex items-center bg-gray-700 p-3 rounded-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <FaCheck className="text-green-400 mr-3" />
+              <div className="w-full">
+                <div className="flex justify-between mb-1">
+                  <span className="text-white">{skill.name}</span>
+                  <span className="text-xs text-gray-400">
+                    {skill.percentage}%
+                  </span>
+                </div>
+                <div className="w-full h-3 bg-gray-600 rounded-md overflow-hidden">
                   <div
-                    className="bg-blue-500 h-full rounded-md"
+                    className="h-full bg-blue-500 rounded-md"
                     style={{ width: `${skill.percentage}%` }}
                   ></div>
                 </div>
-                <span className="text-xs text-gray-500">
-                  {skill.percentage}%
-                </span>
               </div>
             </div>
           ))}
